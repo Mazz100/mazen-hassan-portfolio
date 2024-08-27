@@ -27,8 +27,8 @@ export default {
 
     extend: {
       animation: {
-        fadeIn: "fadeIn 0.25s ease-in-out",
-        fadeOut: "fadeOut 0.5s ease-out",
+        fadeIn: "fadeIn 0.2s ease-in",
+        fadeOut: "fadeOut 0.2s ease-out",
         animationReduce:
           "animationReduce 0.0s linear" /*Reduced motion (No Animation)*/,
       },
@@ -36,8 +36,8 @@ export default {
       keyframes: {
         fadeIn: {
           "0%": {
-            opacity: "1",
-            transform: "translateY(-400px)",
+            opacity: "0",
+            transform: "translateY(25px)",
           },
           "100%": {
             opacity: "1",
@@ -51,8 +51,8 @@ export default {
             transform: "translateY(0)",
           },
           "100%": {
-            opacity: "1",
-            transform: "translateY(-400px)",
+            opacity: "0",
+            transform: "translateY(25px)",
           },
         },
 

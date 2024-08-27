@@ -5,53 +5,28 @@ const Footer = () => {
     <div className="w-full bg-secondary-color p-2">
       <nav
         aria-label="footer"
-        className="mb-4 flex items-start justify-around gap-4"
+        className="mb-4 flex flex-col items-center gap-4 desktop:flex-row desktop:justify-around"
       >
-        <div>
-          <p className="mb-4">Links</p>
-          <ul className="flex flex-col gap-4">
-            <li>
-              <a
-                href="#Home"
-                className="underline underline-offset-4 transition-colors hover:text-states-color"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#About"
-                className="underline underline-offset-4 transition-colors hover:text-states-color"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#Skills"
-                className="underline underline-offset-4 transition-colors hover:text-states-color"
-              >
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="#Projects"
-                className="underline underline-offset-4 transition-colors hover:text-states-color"
-              >
-                Projects
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a
+          href="#"
+          className="rounded-md transition-colors hover:text-states-color"
+        >
+          <p className="text-3xl">
+            <span className="text-states-color">Mazen</span> Hassan
+          </p>
+        </a>
 
         <div>
-          <p className="mb-4">Network</p>
+          <p className="mb-4 text-center">Connect</p>
           <ul className="flex gap-4">
             <li>
-              <a href="https://github.com/Mazz100" aria-label="GitHub icon">
+              <a
+                href="https://github.com/Mazz100"
+                className="block rounded-full"
+                aria-label="GitHub icon"
+              >
                 <svg
-                  className="h-6 w-6 rounded-full transition-colors hover:fill-states-color"
+                  className="h-10 w-10 rounded-full transition-colors hover:fill-states-color"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -71,10 +46,11 @@ const Footer = () => {
             <li>
               <a
                 href="https://www.linkedin.com/in/mazen-hassan-3429a7225/"
+                className="block rounded-full"
                 aria-label="Linkedin icon"
               >
                 <svg
-                  className="h-6 w-6 rounded-full transition-colors hover:fill-states-color"
+                  className="h-10 w-10 rounded-full transition-colors hover:fill-states-color"
                   ariahidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -94,13 +70,15 @@ const Footer = () => {
             <li>
               <a
                 href="https://www.frontendmentor.io/profile/Mazz100"
+                className="block rounded-full"
                 aria-label="frontendmentor icon"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-10 w-10"
                   width="25"
                   height="25"
                   xmlns="http://www.w3.org/2000/svg"
+                  viewBox=" 0 0 25 25"
                 >
                   <g fillRule="nonzero" fill="none"></g>
                   <g fill="#1C2122">

@@ -4,9 +4,11 @@ import * as Seperator from "@radix-ui/react-separator";
 const Home = () => {
   return (
     <div className="flex w-full flex-col p-12" id="Home">
-      <h1 className="my-1 text-4xl">Hello, I'm</h1>
+      <div className="flex flex-wrap items-center gap-4">
+        <h1 className="my-1 text-4xl">Hello, I'm</h1>
 
-      <span className="text-7xl font-bold text-states-color">Mazen</span>
+        <span className="text-7xl font-bold text-states-color">Mazen</span>
+      </div>
 
       <p className="my-1 text-xl opacity-70"> a frontend web developer</p>
 
@@ -17,9 +19,13 @@ const Home = () => {
 
       <ul className="flex items-center gap-4 p-2">
         <li>
-          <a href="https://github.com/Mazz100" aria-label="GitHub icon">
+          <a
+            href="https://github.com/Mazz100"
+            className="block rounded-full"
+            aria-label="GitHub icon"
+          >
             <svg
-              className="h-6 w-6 rounded-full transition-colors hover:fill-states-color"
+              className="h-10 w-10 transition-colors hover:fill-states-color"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -39,10 +45,11 @@ const Home = () => {
         <li>
           <a
             href="https://www.linkedin.com/in/mazen-hassan-3429a7225/"
+            className="block rounded-full"
             aria-label="Linkedin icon"
           >
             <svg
-              className="h-6 w-6 rounded-full transition-colors hover:fill-states-color"
+              className="h-10 w-10 transition-colors hover:fill-states-color"
               ariahidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -62,13 +69,15 @@ const Home = () => {
         <li>
           <a
             href="https://www.frontendmentor.io/profile/Mazz100"
+            className="block rounded-full"
             aria-label="frontendmentor icon"
           >
             <svg
-              className="h-6 w-6"
+              className="h-10 w-10"
               width="25"
               height="25"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox=" 0 0 25 25"
             >
               <g fillRule="nonzero" fill="none"></g>
               <g fill="#1C2122">

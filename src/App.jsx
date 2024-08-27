@@ -12,8 +12,6 @@ function App() {
   useEffect(() => {
     const checkScroll = () => setIsScroll(window.scrollY > 0);
 
-    console.log(isScroll);
-
     window.addEventListener("scroll", checkScroll);
 
     return () => {
@@ -24,7 +22,7 @@ function App() {
   return (
     <>
       <div className="flex min-h-screen flex-col items-center bg-body-bg-color font-Inter-font-family text-text-color">
-        <header className="z-10 w-full">
+        <header className="w-full">
           <NavbarHeader />
         </header>
 

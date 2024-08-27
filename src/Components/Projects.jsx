@@ -10,10 +10,7 @@ const Projects = () => {
     {
       screenshot: restApiCountriesImage,
       name: "Restful API countries",
-      description: `In this Frontend Mentor project, I utilized APIs and asynchronous functions to fetch and display JSON data dynamically. 
-      I incorporated React-Router to enable navigation to each country's details and manage 404 error pages. 
-      By using the useParams hook, I retrieved individual country IDs, and the useSearchParams hook allowed for storing user values in the URL, facilitating link sharing and bookmarking.
-      Additionally, I employed the Radix UI Select component for its accessibility and customization options, which helped me achieve the desired functionality and appearance.`,
+      description: `Countries API with search and filter features and dark theme switch `,
       techUsed: {
         react: "React.js",
         reactRouter: "React Router",
@@ -30,7 +27,7 @@ const Projects = () => {
       screenshot: crowdFundImage,
       name: "Crowdfunding Page",
       description:
-        "In this project by Frotend Mentor, I maintained the state management with useContext hook and minimized the parent to child prop passing and prop drilling, properly storing states and easily modify and access it",
+        "Dynamic state management by updating fund and total backers",
       techUsed: {
         react: "React.js",
         scss: "SCSS",
@@ -44,7 +41,7 @@ const Projects = () => {
     {
       screenshot: tipCalculatorImage,
       name: "Tip calculator app",
-      description: `In this Frontend Mentor project, I effeciently utilized the useState and useEffect hook to dynamically calculate tips and manage user input. Furthermore, resetting the calculator for new input`,
+      description: `A splitter calculator for calculating total price and person with percentage`,
       techUsed: {
         react: "React.js",
         scss: "SCSS",
@@ -58,8 +55,7 @@ const Projects = () => {
     {
       screenshot: clipBoardImage,
       name: "Clipboard landing page",
-      description: `This landing page project by Frontend Mentor, showcases my use of both flex and grid layouts to achieve a well-structured design. 
-      I ensured proper HTML tag usage for each piece of content, eliminating excessive tags and maintaining clean, semantic markup.`,
+      description: `Landing page with semantic and accessible HTML`,
       techUsed: {
         tailwind: "Tailwind",
         html: "HTML5",
@@ -72,26 +68,29 @@ const Projects = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center p-12">
-        <h2 className="mb-10 text-center text-5xl" id="Projects">
+      <div className="flex flex-col place-content-center items-center justify-center p-12 desktop:grid desktop:grid-cols-2 desktop:place-items-start desktop:gap-6">
+        <h2
+          className="col-span-2 mb-10 place-self-center text-center text-5xl"
+          id="Projects"
+        >
           Projects
         </h2>
         {projects.map((project) => (
           <div
             key={project.name}
-            className="group mb-10 flex flex-col items-center overflow-hidden rounded-lg bg-secondary-color desktop:grid desktop:grid-cols-2 desktop:grid-rows-1 desktop:gap-8"
+            className="group mb-10 flex flex-col items-center overflow-hidden rounded-lg bg-secondary-color"
           >
             <img
-              className="h-full object-cover transition-transform duration-300 ease-out motion-reduce:group-hover:scale-100 desktop:-translate-x-40 desktop:-translate-y-3/4 desktop:-rotate-45 desktop:group-hover:translate-x-0 desktop:group-hover:translate-y-0 desktop:group-hover:rotate-0"
+              className="aspect-video object-cover transition-transform duration-300 ease-in motion-reduce:group-hover:translate-y-0 desktop:-translate-y-3/4 desktop:group-hover:translate-y-0"
               src={project.screenshot}
               alt={`${project.name} screenshot`}
             />
 
-            <div className="p-6">
-              <h3 className="my-4 text-center text-lg">{project.name}</h3>
+            <div className="w-full p-6 text-center">
+              <h3 className="my-4 text-center text-xl">{project.name}</h3>
               <p className="mb-4 opacity-70">{project.description}</p>
 
-              <ul className="flex flex-wrap items-center gap-4 text-sm">
+              <ul className="flex flex-wrap items-center justify-center gap-4 text-sm">
                 {Object.entries(project.techUsed).map(([key, value]) => (
                   <li key={key} className="rounded-md bg-body-bg-color p-2">
                     {value}
@@ -100,7 +99,7 @@ const Projects = () => {
               </ul>
 
               <Separator.Root
-                className="mt-4 bg-body-bg-color data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"
+                className="my-4 bg-body-bg-color data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"
                 orientation="horizontal"
               />
 
@@ -108,7 +107,7 @@ const Projects = () => {
                 href={project.url}
                 type="b"
                 target="_blank"
-                className="my-4 mr-4 inline-flex items-center underline underline-offset-8 transition-colors hover:text-states-color"
+                className="my-4 mr-4 inline-flex items-center rounded-md underline underline-offset-8 transition-colors hover:text-states-color"
               >
                 Project Live Demo
                 <svg
@@ -131,7 +130,7 @@ const Projects = () => {
               <a
                 href={project.code}
                 target="_blank"
-                className="my-4 inline-flex items-center underline underline-offset-8 transition-colors hover:text-states-color"
+                className="my-4 inline-flex items-center rounded-md underline underline-offset-8 transition-colors hover:text-states-color"
               >
                 Project Code
                 <svg
@@ -156,7 +155,10 @@ const Projects = () => {
 
         <a
           href="https://github.com/Mazz100"
-          className="col-span-2 place-self-center rounded-md p-3 underline underline-offset-8 transition-colors hover:text-states-color"
+          className={[
+            "relative col-span-2 place-self-center transition-colors ease-in-out hover:text-states-color focus-visible:text-states-color focus-visible:outline-none",
+            "after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-interactive-states-bg after:transition-all after:duration-[0.2s] after:ease-in-out after:hover:w-full after:focus-visible:w-full",
+          ].join(" ")}
         >
           More on GitHub
         </a>
